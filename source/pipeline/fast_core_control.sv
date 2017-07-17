@@ -133,7 +133,7 @@ module fast_core_control (
         //---------------------------------------------------------------------
         // prefetch buffer
         //---------------------------------------------------------------------
-            enum {OP_PREFETCH_A_3_BYTE, OP_PREFETCH_SEQUENTIAL} op_prefetch = 0;
+            enum {OP_PREFETCH_A_3_BYTE, OP_PREFETCH_SEQUENTIAL} op_prefetch = OP_PREFETCH_A_3_BYTE;
             localparam PREFETCH_NUM_OF_OPERATIONS = op_prefetch.num();
             logic [PREFETCH_NUM_OF_OPERATIONS - 1:0] ctl_prefetch_cmd;
             
@@ -150,7 +150,7 @@ module fast_core_control (
         //---------------------------------------------------------------------
         // Instruction Register
         //---------------------------------------------------------------------
-            enum {OP_IR_LOAD_FROM_B, OP_IR_LOAD_SEQUENTIAL} op_IR = 0;
+            enum {OP_IR_LOAD_FROM_B, OP_IR_LOAD_SEQUENTIAL} op_IR = OP_IR_LOAD_FROM_B;
             localparam IR_NUM_OF_OPERATIONS = op_IR.num();
             logic [IR_NUM_OF_OPERATIONS - 1:0]  ctl_IR_cmd;
             
@@ -435,7 +435,7 @@ module fast_core_control (
     //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                 
         enum {S_INIT, S_FILL_PIPE_1ST, S_FILL_PIPE_2ND, S_FILL_PIPE_3RD,  
-              S_RUN_NORMAL, S_RUN_EXT, S_RUN_EXT_EXT} states = 0;
+              S_RUN_NORMAL, S_RUN_EXT, S_RUN_EXT_EXT} states = S_INIT;
                 
         localparam FSM_NUM_OF_STATES = states.num();
         logic [FSM_NUM_OF_STATES - 1:0] current_state = 0, next_state;

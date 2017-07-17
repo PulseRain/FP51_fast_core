@@ -84,7 +84,7 @@ module fast_core_I_fetch (
     // Fetch Address A  
     //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                 
-        enum {OP_ADDR_A_PC_PLUS_3, OP_ADDR_A_ADJUST} op_addr_A = 0;
+        enum {OP_ADDR_A_PC_PLUS_3, OP_ADDR_A_ADJUST} op_addr_A = OP_ADDR_A_PC_PLUS_3;
                 
         localparam ADDR_A_NUM_OF_OPERATIONS = op_addr_A.num();
         logic [ADDR_A_NUM_OF_OPERATIONS - 1:0]  ctl_addr_A_cmd;
@@ -143,7 +143,7 @@ module fast_core_I_fetch (
         //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         // Fetch Address B  
         //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-        enum {OP_ADDR_B_PC, OP_ADDR_B_PLUS_3} op_addr_B = 0;
+        enum {OP_ADDR_B_PC, OP_ADDR_B_PLUS_3} op_addr_B = OP_ADDR_B_PC;
         
         localparam ADDR_B_NUM_OF_OPERATIONS = op_addr_B.num();
         logic [ADDR_B_NUM_OF_OPERATIONS - 1:0] ctl_addr_B_cmd;
@@ -201,7 +201,7 @@ module fast_core_I_fetch (
         // FSM
         //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                     
-        enum {S_HOLD, S_RUN} states = 0;
+        enum {S_HOLD, S_RUN} states = S_HOLD;
                     
         localparam FSM_NUM_OF_STATES = states.num();
         logic [FSM_NUM_OF_STATES - 1:0] current_state = 0, next_state = 0;

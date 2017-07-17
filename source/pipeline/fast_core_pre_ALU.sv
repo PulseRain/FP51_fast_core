@@ -329,7 +329,7 @@ module fast_core_pre_ALU (
     // FSM
     //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                 
-        enum {S_RUN, S_HOLD} states = 0;
+        enum {S_RUN, S_HOLD} states = S_RUN;
                 
         localparam FSM_NUM_OF_STATES = states.num();
         logic [FSM_NUM_OF_STATES - 1:0] current_state = 0, next_state;

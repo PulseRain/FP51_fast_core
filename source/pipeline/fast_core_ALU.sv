@@ -919,7 +919,7 @@ module fast_core_ALU (
     // FSM
     //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                 
-        enum {S_RUN, S_NOP_RUN, S_RET, S_RUN_EXT} states = 0;
+        enum {S_RUN, S_NOP_RUN, S_RET, S_RUN_EXT} states = S_RUN;
                 
         localparam FSM_NUM_OF_STATES = states.num();
         logic [FSM_NUM_OF_STATES - 1:0] current_state = 0, next_state = 0;

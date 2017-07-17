@@ -2,8 +2,8 @@ file delete -force work
 vlib work
 vmap work work
 
-set common "../../../PulseRain_FP51_MCU/trunk/common"
-set pulserain_rtl_lib "../../../PulseRain_rtl_lib/trunk"
+set common "../../../common"
+set pulserain_rtl_lib "../../PulseRain_rtl_lib"
 
 vlog -work work -sv $pulserain_rtl_lib/BCD/DA_A.sv
 vlog -work work -sv $pulserain_rtl_lib/SRT_DIV/SRT_Radix4_single_stage.sv
