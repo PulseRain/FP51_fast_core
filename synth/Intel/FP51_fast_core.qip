@@ -15,8 +15,8 @@ set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) "../../
 set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) "../../source/pipeline/fast_core_pre_ALU.sv"]
 set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) "../../source/FP51_fast_core.sv"]
 
-set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) "../../submodules/PulseRain_rtl_lib/BCD/DA_A.sv"]
-set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) "../../submodules/PulseRain_rtl_lib/SRT_DIV/SRT_Radix4_single_stage.sv"]
-set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) "../../submodules/PulseRain_rtl_lib/SRT_DIV/SRT_Radix4_cascade.sv"]
-set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) "../../submodules/PulseRain_rtl_lib/SRT_DIV/SRT_Radix4_division.sv"]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) "../../source/BCD/DA_A.sv"]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) "../../source/SRT_DIV/SRT_Radix4_single_stage.sv"]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) "../../source/SRT_DIV/SRT_Radix4_cascade.sv"]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) "../../source/SRT_DIV/SRT_Radix4_division.sv"]
 
